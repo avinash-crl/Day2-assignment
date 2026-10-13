@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Show{
+            color: green;
+        }
+        .Hide{
+            color: red;
+        }
+        .dark{
+            background-color: black;
+            color: white;   
+        }
+    </style>
+</head>
+<body id="page">
+    <!-- <button id="count">count</button>
+    <button id="decrease">-1</button>
+    <button id="reset">reset</button>
+    <h1 id="plus"></h1>
+    <script>
+        var count =0;
+        const button=document.getElementById("count");
+        const label=document.getElementById("plus");
+        const reset=document.getElementById("reset");
+        button.addEventListener('click',function(){
+            count=count+1;
+            label.textContent= `Counter value is: ${count}`;
+        })
+
+        const button2=document.getElementById("decrease");
+        button2.addEventListener('click',function(){
+            count=count-1;
+            label.textContent=`Counter value is: ${count}`;
+        })
+
+        const button3=document.getElementById("reset");
+        button3.addEventListener('click',function(){
+            count=0;
+            label.textContent= `Counter value is: ${count}`;
+        }) -->
+
+        <button id="show">kathuu</button>
+        <button id="change">change</button>
+        <h1 id="show1"></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+    </script>
+        <script>
+            var boolean;
+            const button=document.getElementById("show");
+            const label=document.getElementById("show1");
+            button.addEventListener('click',function(){
+                boolean=!boolean;
+                label.textContent=`${boolean?"Showing":"Hidden"}`;
+                label.className=`${boolean?"Show":"Hide"}`;
+            })
+
+            const button2=document.getElementById("change");
+            button2.addEventListener('click',function(){
+                document.getElementById("page").classList.toggle("dark");
+        })
+        </script>
+        
+</body>
+</html>

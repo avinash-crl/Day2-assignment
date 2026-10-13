@@ -1,0 +1,258 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.dark {
+    background: #252525;
+    color: #fcfcfd;
+}
+
+body.dark .resume {
+    background: #333333;
+    color: #fcfcfd;
+}
+
+body.dark .header h1,
+body.dark section h2,
+body.dark strong,
+body.dark h3 {
+    color: #fcfcfd;
+}
+
+body.dark .item-heading span,
+body.dark .organization {
+    color: #dddddd;
+}
+
+body.dark a {
+    color: #93c5fd;
+}
+
+body.dark .header,
+body.dark section h2 {
+    border-color: #777777;
+}
+
+body.dark .resume {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e9edf2;
+    color: #252525;
+    font-size: 10px;
+    line-height: 1.4;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* BUTTONS */
+.buttons {
+    width: 210mm;
+    margin: 20px auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #243b53;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+.resume {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 25px auto;
+    padding: 12mm 15mm;
+    background: #f7f6f6;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+.profile-image {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #243b53;
+    margin: 0 auto 10px;
+}
+
+.profile-image[hidden] {
+    display: none;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #243b53;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 25px;
+    color: #172b4d;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 10px;
+}
+
+.header p {
+    margin-top: 4px;
+}
+
+a {
+    color: #243b53;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+/* SECTIONS */
+section {
+    margin-bottom: 9px;
+}
+
+section h2 {
+    font-size: 13px;
+    color: #172b4d;
+    border-bottom: 1px solid #9aa8b6;
+    padding-bottom: 3px;
+    margin-bottom: 5px;
+    text-transform: none;
+}
+
+p {
+    margin-bottom: 2px;
+}
+
+.item {
+    margin-bottom: 5px;
+    break-inside: avoid;
+}
+
+h3 {
+    font-size: 10px;
+    font-weight: bold;
+    color: #222222;
+}
+
+.item-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.item-heading span {
+    white-space: nowrap;
+    font-size: 9px;
+    color: #444444;
+}
+
+.organization {
+    font-style: italic;
+    color: #444444;
+    margin-bottom: 1px;
+}
+
+ul {
+    padding-left: 14px;
+    margin-top: 2px;
+}
+
+li {
+    padding-left: 1px;
+    margin-bottom: 1px;
+}
+
+.skills li,
+.certifications li {
+    margin-bottom: 2px;
+}
+
+strong {
+    color: #172b4d;
+}
+
+/* MOBILE SCREEN */
+@media screen and (max-width: 768px) {
+    .resume {
+        width: 95%;
+        min-height: auto;
+        padding: 20px;
+        margin: 15px auto;
+    }
+
+    .buttons {
+        width: 95%;
+        flex-wrap: wrap;
+    }
+
+    .item-heading {
+        align-items: flex-start;
+    }
+}
+
+/* DOWNLOAD / PRINT */
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    .buttons {
+        display: none !important;
+    }
+
+    body,
+    body.dark {
+        background: white !important;
+        color: #252525 !important;
+    }
+
+    .resume,
+    body.dark .resume {
+        width: 210mm;
+        margin: 0;
+        box-shadow: none;
+        background: white !important;
+        color: #252525 !important;
+    }
+
+    body.dark .header h1,
+    body.dark section h2,
+    body.dark h3,
+    body.dark strong {
+        color: #172b4d !important;
+    }
+
+    body.dark a {
+        color: #243b53 !important;
+    }
+
+    body.dark .item-heading span,
+    body.dark .organization {
+        color: #444444 !important;
+    }
+}
